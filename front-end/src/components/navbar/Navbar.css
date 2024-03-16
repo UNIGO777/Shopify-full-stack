@@ -1,0 +1,435 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    font-size: 10px;
+}
+
+ nav {
+    padding: 10px;
+    background-color: #ffffff;
+
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.navdiv-1 {
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nav-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+ nav h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+
+    font-size: 1rem;
+} 
+#navbar-p{
+    font-size: 1rem; 
+      padding: 6px; 
+    
+    border-radius: 7px;
+} 
+
+nav h1 span {
+    
+    color: #373739;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 1.5em;
+    list-style: none;
+    font-weight: 800;
+
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    font-size:medium;
+    width: 100%;
+    transition: all ease 0.1s;
+    height: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+li:hover {
+    border-bottom: 2px solid #000000;
+    
+}
+
+.button-box {
+    width: 15%;
+    height: 80%;
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button-box button {
+    
+    height: 100%;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.button-box a {
+    text-decoration: none;
+
+}
+#list{
+    color: #000;
+    text-decoration: none;
+}
+.button-box #one {
+    
+    color: rgb(255, 255, 255);
+}
+
+.button-box #two {
+   
+    color: rgb(255, 255, 255);
+}
+
+#first-button {
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid black;
+} */
+
+/**      2nd code
+/* #main-navbar{
+    background-color: #dadada;
+    height: 50px;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+#main-nav-part-1{
+  
+    padding: 40px;
+}
+#main-nav-part-1 #main-nav-logo{
+    rotate:90deg;
+}
+#main-nav-part-1 .main-nav-logo{
+    
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    
+    background-color: #151515;
+}
+#main-nav-part-1 .main-nav-logo:nth-child(1){
+
+   margin-bottom: 2px;
+}
+#main-nav-part-2{
+    background-color: blue;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+#main-nav-part-2 #list{
+    text-decoration: none;
+    color: white;
+}
+#main-nav-part-3{
+ 
+    display: flex;
+
+    align-items: center;
+    justify-content: end;
+    padding: 30px;
+    
+
+}
+#main-nav-part-3 #navbar-p{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+#logout-msg{
+    position: absolute;
+    right: 10px;
+    top:40px;
+    border-radius: 10px;
+    z-index: 999;
+    height: 80px;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    
+    background-color: rgb(62, 59, 56);
+}
+#main-nav-part-3:hover #logout-msg{
+    display: inline;
+}
+#logout-msg p{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+#main-nav-part-3 #logout-msg button{
+    padding: 10px;
+    height: 35px;
+    
+    position: relative;
+    
+    width: 60px;
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000;
+}
+#one button{
+    border-radius: 10px;
+    font-size: 10px;
+    height: 5vh;
+    width:  6vw;
+}
+#one #first-button{
+    background-color: #d1cfcf;
+    color: #000;
+}*/
+
+
+
+
+
+
+/* 3rd try */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'mont';
+    /* Specify the font family name */
+    src: url('../../fonst/Montserrat-Medium.ttf') format('woff'),
+        /* Specify the path to your font file */
+
+}
+li{
+    list-style: none;
+}
+
+.nav-links {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+
+#navbar {
+    background-color: transparent;
+    padding: 20px;
+    height: 60px;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar #nav-part-1,
+#nav-part-3 {
+    /* background-color: aquamarine; */
+    display: flex;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#navbar #nav-part-1 p,
+#nav-part-3 h1,
+#nav-part-2 h1 {
+
+    font-family: mont;
+    font-weight: 400;
+    font-size: small;
+    margin-left: 30px;
+    text-transform: uppercase;
+    position: relative;
+    top: 8px;
+
+
+}
+
+#nav-part-3 h1 {
+    text-transform: capitalize;
+    font-size: 10px;
+}
+
+#nav-menu {
+    position: absolute;
+    background-color: #ededed;
+    width: 20%;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 45% 45% 10%;
+    
+}
+#list-1{
+    /* background-color: black; */
+    display: grid;
+    grid-template-rows:  40% 20% 20% 20%;
+}
+#list-1 #row-links{
+    
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   border-bottom: 1px solid black;
+   position: relative;
+   overflow: hidden;
+   
+    
+}
+#list-1 #row-links:nth-child(1){
+   border-bottom: none;
+    text-transform: uppercase;
+    
+    
+}
+.nav-menu-ani-div{
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    scale: 0;
+    background-color: #dadada;
+    transition: all ease 0.5s;
+    border-radius: 50%;
+}
+#list-1 #row-links:hover .nav-menu-ani-div{
+    scale:  1;
+}
+#list{
+    z-index: 999;
+}
+
+#list-2{
+    /* background-color: rgb(255, 0, 0); */
+}
+#list-3{
+background-color: blue;
+}
+#nav-menu-close{
+    height: 40px;
+    width: 40px;
+    padding: 6px 12px;
+    color: rgb(170, 169, 169);
+    font-size: 20px;
+    /* background-color: black; */
+    border-radius: 50%;
+    position: absolute;
+    right: -40px;
+    top: 2px;
+    cursor: pointer;
+}
+#nav-menu-big-box{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: transparent;
+    z-index: 999;
+
+
+
+}
+#nav-menu-icon{
+    
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#menuIconAni{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    scale: 0;
+    transition: all ease 0.5s;
+}
+#nav-menu-icon:hover #menuIconAni{
+    scale: 1;
+}
+#nav-menu-icon:hover #menuIcon{
+    z-index:999;
+    color: white;
+}
+
+

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'gilroy';
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+.populer-womens-main-div{
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+}
+.populer-womens-main{
+    padding: 10px;
+    
+    width: 99%;
+    /* background-color: aliceblue; */
+    background-color: #fff;
+    /* text-decoration: underline; */
+}
+.populer-womens-item-div{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+.womens-populer-heading{
+    font-size: 1.5rem;
+    
+}
+@media screen and (max-width:1082px) {
+    .populer-womens-item-div{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:810px) {
+    .populer-womens-item-div{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+    }
+}
+@media screen and (max-width:572px) {
+    .populer-womens-item-div{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

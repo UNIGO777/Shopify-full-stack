@@ -1,0 +1,30 @@
+.icon-pi{
+   position: absolute;
+   top: -40px;
+   right: 10px;
+   color: #000000;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 50%;
+   transition: all ease 0.5s;
+              
+   
+}
+.icon-pii{
+   position: absolute;
+   top: -40px;
+   right: 10px;
+   color: #ffffff;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 50%;
+   background-color: #000000;
+   transition: all ease 0.5s;
+              
+   
+}
+.icon-pi:hover{
+    color:  rgb(255, 255, 255);
+    cursor: pointer;
+    border-color: black;
+    background-color: black;
+    
+}

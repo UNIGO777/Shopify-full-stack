@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mont';
+  }
+
+
+*::-webkit-scrollbar{
+    display:none;
+}
+  
+  html,body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #lending-container{
+      height: 100vh;
+      width: 100vw;
+      background-color: #dcdbdb;
+  }
+  #content-box{
+      height: 90%;
+      width: 100%;
+      display: flex;
+  }
+  #content-box-1{
+      height: 100%;
+      width: 40%;
+      /* background-color: red; */
+      display: grid;
+      /* grid-template-columns: 60% 20%; */
+      grid-template-rows: 50% 15% 35%;
+  }
+  
+  
+  #first-content{
+      /* background-color: blueviolet; */
+      /* align-content: center; */
+     
+      padding: 80px;
+      align-self: center;
+      right: -10px;
+  }
+  #first-content h1{
+      text-align: start;
+      font-weight: 100;
+      font-size: 2vw;
+      font-family: mont;
+      color: rgba(0, 0, 0, 0.818);
+      
+      
+  } 
+  #first-content h1:nth-child(2){
+      font-size: 1vw;
+  }
+  #first-content h1 span{
+      font-weight: 900;
+      font-family: mont;
+      color: black;
+  } 
+  #second-content{
+  /* background-color: chartreuse; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  #second-content button{
+      box-shadow: 0 0 10px #74C0FC;
+      border: 2px solid #74C0FC;
+      background-color: transparent;
+      font-family: mont;
+      font-size: 13px;
+      color:#74C0FC;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      width: auto;
+  }
+  #second-content button:hover{
+      border-radius: 15px;
+  }
+  #third-content{
+  /* background-color: #fff; */
+  padding: 50px 80px;
+  
+  }
+  #third-content h1{
+      /* background-color: #fff; */
+      font-family: mont;
+      text-transform: uppercase;
+      font-size: 1.5vh;
+      font-weight: 800;
+  }
+  #content-box-2{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* background-color: blue; */
+      object-fit: cover;
+      object-position: center;
+  }
+  #content-box-2 img{
+    height: 50%;
+      margin-bottom: 80px;
+    
+  }
+  
