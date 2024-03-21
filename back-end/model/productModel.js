@@ -21,6 +21,15 @@ let productScema = new mongoose.Schema({
         type: Number,
         require: true
     },
+    "shop_keeper_Id": {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "shopkeeper_model",
+        required: true
+    },
+    "Stock": {
+        type: Number,
+        default: 0
+    },
     "Description": String
 
     

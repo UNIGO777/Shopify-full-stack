@@ -1,0 +1,29 @@
+.pallate-1-logo{
+    background-color: rgba(252, 218, 81, 0.146);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: orange;
+    
+}
+.pallate-1{
+    gap: 20px;
+    align-items: center;
+    
+}
+#pallate-2-decor{
+    
+    color: rgb(72, 0, 255);
+    background-color: rgba(72, 0, 255, 0.099);
+    
+}
+#pallate-3-decor{
+    
+    color: rgb(0, 156, 39);
+    background-color: rgba(0, 255, 64, 0.121);
+    
+}
+.linechart{
+    background-color: white;
+}

@@ -26,11 +26,12 @@ const Cart = (props) => {
       await axios.post("http://localhost:4000/api/cart", { userId: props.id }).then((res) => {
         // console.log(res, "this is the response")
         setcd(res.data)
+        console.log(res.data)
         
         res.data.map((item) => {
           settotal(0)
           const newQuatity =  res.data.reduce((acc, item) =>
-           acc +  (parseInt(item.Quatity, 10) * parseInt(item.product.New_price, 10)), 0) 
+          acc +  (parseInt(item.Quatity, 10) * parseInt(item.product.New_price, 10)), 0) 
           settotal(newQuatity)
           
           
@@ -40,7 +41,7 @@ const Cart = (props) => {
       
     }
     fatchcartdata()
-
+    
   }, [key])
   const user = JSON.parse(localStorage.getItem("UserData"))
   const userID = user.id
@@ -102,6 +103,7 @@ const Cart = (props) => {
 
   const hendlechakeout = async function () {
     const Stripe = await loadStripe("pk_test_51Ot7zESIIVFXX4GU36WHyyo3C4ERoylV77FpOHoXTfIKgcT21TWRuvazdn27hxTdThb9MZubOqgM70lA5khAyA2I00aDFpU8kM")
+    console.log("sessssssssss")
     const body = {
       products: cartdata
     }
@@ -114,7 +116,6 @@ const Cart = (props) => {
       body: JSON.stringify(body)
     })
     const session = await res.json()
-    console.log(session)
     const result = Stripe.redirectToCheckout({
       
       sessionId: session.id
@@ -129,16 +130,17 @@ const Cart = (props) => {
     <>
       <div >
           {
-              cartdata.length === 0 ? (<div className='empty-cart-div'><FontAwesomeIcon icon="fa-solid fa-cart-shopping" style={{ fontSize: "2em", color:"black" }}/>
+              cartdata.length <= 0 ? (<div className='empty-cart-div'><FontAwesomeIcon icon="fa-solid fa-cart-shopping" style={{ fontSize: "2em", color:"black" }}/>
           <p style={{ fontSize: "0.5em", marginTop: "20px", color: "black" }}><b>YOUR CART IS EMPTY</b></p></div>) : (<>
             
             {/* <div className="container" > */}
             {/* <AllProducts data={cartdata} name='cart' /> */}
             {
                 cartdata.map((item) => {
-                  
+                  console.log(item,"9999999999999")
                   
                   return (
+                    
                   <>
                       <Vcard data={item} Quatity={item.Quatity} clickaddCart={clickaddCart} clickdeleteCart={clickdeleteCart } />
                     <br />

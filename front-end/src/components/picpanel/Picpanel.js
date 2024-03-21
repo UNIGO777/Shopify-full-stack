@@ -2,27 +2,31 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import './Picpanel.css'
 import Navbar from '../navbar/Navbar'
+import fatchProduct from '../../Featch items/Fatch'
 
 
 const Picpanel = (e) => {
-    
-    const [i, seti] = useState(0);
-    let fun1 =function (){
-        if (i === (e.imglink.length - 1)) {
-            seti(0)
+    const [data, setData] = useState([])
+    const [key, setkey] = useState(0)
+    useEffect(() => {
+        async function fatchdata(){
+            let data = fatchProduct();
+            
+          setData(await data)
         }
-        else {
-            seti(i+1)
-        }
-    }
-    let fun2 = function () {
-        if (i === 0) {
-           seti(e.imglink.length-1)
-        }
-        else {
-            seti(i-1)
-        }
-    }
+          fatchdata()
+          
+          function getRandomInt(min, max) {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+        // let keyyyyy = getRandomInt(0, 1);
+        // console.log(keyyyyy, "kkkkkkkkkkkkkkkkkkkkkkkkk")
+        // setkey(keyyyyy)
+        
+    }, [])
+    console.log(data)
    
     // setInterval(() => {
            
@@ -32,14 +36,15 @@ const Picpanel = (e) => {
         
 
     return (
-        <div  id="lending-container">
+    <>
+        {data.length!==0?(<div  id="lending-container">
       <Navbar />
           
           <div id="content-box">
               <div id="content-box-1">
                   <div id="first-content">
-                      <h1>/ <span>Sunglasses</span></h1>
-                      <h1>Elevate your style with our sleek sunglasses. Perfect blend of fashion and functionality. Experience sophistication.</h1>
+                      <h1>/ <span>{ data[key].Name  } </span></h1>
+                      <h1>{data[key].des ? data[key].des : "No Description"}</h1>
                  </div>
                   <div id="second-content">
                       <button>buy now</button>
@@ -49,11 +54,11 @@ const Picpanel = (e) => {
                  </div>
               </div>
               <div id="content-box-2">
-                  <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuZ2xhc3N8ZW58MHx8MHx8fDA%3D" className='shadow' alt="" />
+                  <img src={data[key].Img} className='shadow' alt="" />
               </div>
           </div>
          
-    </div>
+    </div>):(<></>)}</>
       
     )
 }

@@ -1,4 +1,5 @@
 let express = require('express');
+const orderModel = require("../model/shoporder")
 // const product_model = require('../model/productModel');
 let router = express.Router();
 let stripe = require('stripe')('sk_test_51Ot7zESIIVFXX4GU56gE69iWaITzDwL7iHeY4Uq8yuQbFO4Tl4PVUQOrTyzo6LP4y9L8TKjHHyxlQsFjTSCv0M4900EdpCozhA')
@@ -28,6 +29,9 @@ router.post('/payment', async (req, res) => {
         success_url:"http://localhost:3000/success",
         cancel_url:"http://localhost:3000/fail",
     })
+    //shopkepar keeper ki id se shoporder scema nikal kar uske order me product id ko push karna h 
+    
+    
     
     res.json({id:session.id})
 

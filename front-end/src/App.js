@@ -20,6 +20,9 @@ import WomensProduct from './components/products/WomensPopuler'
 import KidsProducts from './components/products/KidsProduct'
 import Success from './components/paymentPages/Success'
 import Fail from './components/paymentPages/Fail'
+import Ownerprofile from './shopkeeperApp/Shopkeeperindex'  
+import ShopOwnerprofile from './shopkeeperApp/shopOwnerprofilePage'
+
 // import Lendingpage from './updated lending page/Lendingpage'
 
 
@@ -46,7 +49,10 @@ const App = () => {
         <Route path='/kids' element={<KidsProducts />} />
         <Route path='/success' element={data?<Success />:<Home/>} />
         <Route path='/fail' element={data?<Fail />:<Home/>} />
+        <Route path='/shopowner' element={data?<Ownerprofile/>:<Home/>} />
+        <Route path='/shopowner/profile' element={data?<ShopOwnerprofile/>:<Home/>} />
         {/* <Route path='/lending' element={<Lendingpage />} /> */}
+
         
         
     

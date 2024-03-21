@@ -3,6 +3,7 @@ import { redirect, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const Vcard = (e) => {
+  console.log(e.data.product.Img,"eeeeeeeeeee")
   // console.log(e.data)
   let navigate = useNavigate()
   let cardClick = (productInfo) => {

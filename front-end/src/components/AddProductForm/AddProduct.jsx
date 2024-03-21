@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './AddProduct.css'
 import Button from '../button/button'
 import axios from 'axios'
@@ -10,14 +10,25 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const AddProduct = () => {
+  const [shopkeeperdata, setshopdata] = useState({});
+    useEffect(() => {
+        let locals = () => {
+            setshopdata(JSON.parse(localStorage.getItem('shopkeeper')));
+        }
+        locals();
+    }, [])
+  
   const [fromData, setfromData] = useState({
     Name: '',
     Img: '',
     Description: '',
     Category: '',
     New_price: null,
-    Old_price: null
+    Old_price: null,
+    Stock:null,
+    shop_keeper_Id:''
   })
+  
   const [ftval, setftval] = useState(false);
   const [img, setimg] = useState('')
   let hendleImageChange = function (e) {  
@@ -57,6 +68,7 @@ const AddProduct = () => {
     }
     const imgurl = `${supabaseUrl}/storage/v1/object/public/product_imgs/products_img/${img.name}`
     console.log(imgurl)
+    setfromData({...fromData, shop_keeper_Id:shopkeeperdata._id})
     let data = axios.post('http://localhost:4000/api/add/new/product', { ...fromData, Img: imgurl }).then(Response => {
       // console.log(Response)
       setftval(true);
@@ -122,6 +134,8 @@ const AddProduct = () => {
                <input type="number" value={fromData.New_price} onChange={hendleChange} min='10' id="mainPrice" className='product-input-fild' placeholder='Main price' name='New_price' required/></div>
              <div className='add-product-RightForm-div' id="mainPrice-div"><label id='heading'>Description</label>
                <input type="Text" value={fromData.Description} onChange={hendleChange} min='10' id="mainPrice" className='product-input-fild' placeholder='Description' name='Description' required /></div>
+             <div className='add-product-RightForm-div' id="mainPrice-div"><label id='heading'>Stock</label>
+               <input type="number" value={fromData.Stock} onChange={hendleChange} min='100' id="mainPrice" className='product-input-fild' placeholder='Stock' name='Stock' required /></div>
              <button data="SUBMIT" type="submit" className="btn btn-primary" style={{width:"auto"}}>Add product</button>
 
            </div>

@@ -5,6 +5,8 @@ let productRouter = require('./routes/product')
 let cartRouter = require('./routes/Cart')
 let paymentRouter = require('./routes/payment')
 let wishlistRouter = require('./routes/wishList')
+let shopkeeperuserRouter = require('./routes/shopkeeperUser')
+let orderRouter = require('./routes/Orders')
 mongoose.connect("mongodb://127.0.0.1/shoppingsite");
 let app = express();
 let userModel = require('./model/userModel')
@@ -16,6 +18,8 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('hllo')
 })
+app.use('/api', shopkeeperuserRouter)
+app.use('/api', orderRouter)
 app.use('/api', wishlistRouter)
 app.use('/api', userRouter)
 app.use('/api', productRouter)

@@ -30,7 +30,8 @@ const Mensproducts = () => {
   return (
     <div>
      
-      <Picpanel imglink={imglink} />
+      {/* <Picpanel imglink={imglink} /> */}
+      <Navbar/>
       <br />
         <AllProducts data={data} name='Mens populer :' />
       
