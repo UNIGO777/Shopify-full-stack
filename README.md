@@ -2,9 +2,7 @@
 
 <section class="w-full px-4 py-12 md:px-6">
   <div class="mx-auto prose lg:prose-lg dark:prose-inherit max-w-3xl">
-    <h1 class="font-bold text-4xl tracking-tight md:text-5xl lg:text-6xl md:leading-[80px] dark:font-extrabold dark:text-gray-50">
-      Welcome to Acme Inc
-    </h1>
+    
     <p class="text-gray-500 mt-4 dark:text-gray-400">
       Your one-stop destination for all your shopping needs. From electronics to fashion, we've got you covered.
     </p>
